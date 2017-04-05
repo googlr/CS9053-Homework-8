@@ -1,7 +1,5 @@
 package edu.nyu.cs9053.homework8;
 
-//import java.time.LocalDateTime;
-
 public class LambdaJob{
 	private final int startingTime;
 	private final int finalTime;
@@ -10,11 +8,11 @@ public class LambdaJob{
 		this.finalTime = finalTime;
 	}
 
-	public int getStartingTime(){
+	public Integer getStartingTime(){
 		return this.startingTime;
 	}
 
-	public int getFinalTime(){
+	public Integer getFinalTime(){
 		return this.finalTime;
 	}
 }

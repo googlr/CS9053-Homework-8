@@ -5,11 +5,17 @@ import java.util.List;
 import java.util.Iterator;
 
 public class LambdaWeightedScheduler{
-	public LambdaWeightedScheduler(){
-		;
+	private final List<LambdaWeightedJob> jobList;
+	private static final int minStartingTime = 0;
+	private static final int maxFinalTime = Integer.MAX_VALUE;
+	public LambdaWeightedScheduler(List<LambdaWeightedJob> jobList){
+		this.jobList.add( new LambdaWeightedJob(Integer.MIN_VALUE, minStartingTime) );
+		this.jobList.addAll( jobList );
+		this.jobList.add( new LambdaWeightedJob(maxFinalTime, maxFinalTime) );
+
 	}
 
-	public void getScheduleList(){
+	public List<LambdaWeightedJob> getScheduleList(){
 		List<LambdaJob> jobList = new ArrayList<>();
 				jobList.add( new LambdaJob(0,0) );
 
@@ -55,9 +61,5 @@ public class LambdaWeightedScheduler{
 			System.out.print("\n");
 		}		
 		System.out.println("Max is " + c[0][jobListSize + 1]);
-	}
-	public static void main(String[] args){
-		LambdaWeightedScheduler lambdaScheduler = new LambdaWeightedScheduler();
-		lambdaScheduler.getScheduleList();
 	}
 }
