@@ -8,15 +8,15 @@ public class LambdaWeightedJob extends LambdaJob{
 		this.cost = cost;
 	} 
 
-	@Override public int getStartingTime(){
+	@Override public Integer getStartingTime(){
 		return super.getStartingTime();
 	}
 
-	@Override public int getFinalTime(){
+	@Override public Integer getFinalTime(){
 		return super.getFinalTime();
 	}
 
-	public int getCost(){
+	public Integer getCost(){
 		return this.cost;
 	}
 }
