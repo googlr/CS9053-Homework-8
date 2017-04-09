@@ -3,9 +3,13 @@ package edu.nyu.cs9053.homework8;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Iterator;
+import static org.junit.Assert.*;
 
 public class Test{
 	public static void main(String[] args){
+
+		long a = 5, b=5;
+		assertEquals(a, b);
 
 		System.out.println("Test for LambdaScheduler");
 
